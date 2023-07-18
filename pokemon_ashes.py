@@ -11,8 +11,9 @@ from datetime import datetime, timedelta
 from dotenv import load_dotenv
 import os 
 
-
 load_dotenv()
+
+token = os.environ['token']
 config = os.environ['config']
 config = json.loads(config)
 email = os.environ.get('email')
@@ -2067,4 +2068,4 @@ async def pokedex(ctx,*,mon):
             await ctx.send("Pokemon not found, **Gen8 mons are not implemented yet**")
 
 
-client.run('NzQ3ODAzMjI4MzAwOTAyNDcx.GBiRJo.ZiGXCWZVDcKJ3rN_LJ7MZPvo-jaUQP9KuktV2Y')
+client.run(token)
